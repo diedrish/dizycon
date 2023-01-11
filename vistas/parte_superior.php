@@ -47,6 +47,11 @@
         <a class="nav-link" href="index.php">
           <span>Maestro de Cuentas</span></a>
       </li>
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <span>Creacion de Patidas</span></a>
+      </li>
 
 
      
@@ -61,7 +66,6 @@
             <h6 class="collapse-header">Opciones Empresas:</h6>
             
             <a class="collapse-item" href="empresas.php">Registro de Empresas</a>
-            <a class="collapse-item" href="buttons.php">Buttons</a>
           </div>
         </div>
       </li>
