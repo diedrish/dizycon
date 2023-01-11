@@ -49,7 +49,7 @@
       </li>
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="creacionPartidas.php">
           <span>Creacion de Patidas</span></a>
       </li>
 
@@ -66,6 +66,8 @@
             <h6 class="collapse-header">Opciones Empresas:</h6>
             
             <a class="collapse-item" href="empresas.php">Registro de Empresas</a>
+            
+            <a class="collapse-item" href="empresas.php">Registro de Usuarios</a>
           </div>
         </div>
       </li>
