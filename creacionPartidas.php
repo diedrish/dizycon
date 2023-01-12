@@ -69,15 +69,43 @@
                         <div class="form-group">
                             <label for="txt_fecha" class="col-form-label">Fecha</label>
 
-                            <input type="date" id="txt_fecha" name="trip-start" value="" min="2023-01-01" max="2023-12-31">
+                            <input type="date" id="txt_fecha" name="trip-start" value="" min="2023-01-01"
+                                max="2023-12-31">
                         </div>
-                        
+
 
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                        
+
+
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="tabla" class="table table-striped table-bordered table-condensed"
+                                style="width:100%">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>CODIGO</th>
+                                        <th>CONCEPTO</th>
+                                        <th>DEBE</th>
+                                        <th>HABER</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                   <td><input type="text" class="form-control" id="txt_cuenta" autocomplete="off"></td>
+                                   <td>concepto</td>
+                                   <td>12</td>
+                                   <td>12</td>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+
                 </form>
             </div>
         </div>
