@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var editar = false;
-    
-  listarPartidas();
+
+    listarPartidas();
 
     $('#tablaPartidas').DataTable({
         "ajax": {
@@ -17,12 +17,12 @@ $(document).ready(function () {
             { "data": "diferencia" },
             { "data": "fecha" },
             { "data": "idEmpresa" },
-             {
+            {
                 "targets": -1,
                 "data": null,
                 "defaultContent": "<td><div class='text-center'><div class='btn-group'><button class='btn btn-primary btnEditar'>Editar</button> &nbsp <button class='btn btn-danger btnBorrar'>Borrar</button> &nbsp <button class='btn btn-info btnAdd'>ADD</button></div></div></td>"
-              
-             }
+
+            }
         ]
 
     });
@@ -36,6 +36,31 @@ $(document).ready(function () {
         $("#modalCRUD").modal("show");
         id = null;
         editar = false;
+        traerActual();
+    });
+
+
+
+    $("#btnAgregarPartida").click(function () {
+
+        let tabla = document.getElementById('detallePartida').insertRow(0);
+        let col1 = tabla.insertCell(0);
+        let col2 = tabla.insertCell(1);
+        let col3 = tabla.insertCell(2);
+        let col4 = tabla.insertCell(3);
+        var cuenta = $('#txt_codigo').val();
+        var concepto = $('#txt_conceptoPartida').val();
+        var debe = $('#txt_debe').val();
+        var haber = $('#txt_haber').val();
+
+        col1.innerHTML = cuenta;
+        col2.innerHTML = concepto;
+        col3.innerHTML = debe;
+        col4.innerHTML = haber;
+
+
+
+
     });
 
 
@@ -62,7 +87,7 @@ $(document).ready(function () {
         $("#txt_categoria").val(categoria);
         $("#txt_direccion").val(direccion);
         editar = true;
-        idEmpre=idEmpresa;
+        idEmpre = idEmpresa;
 
 
         $(".modal-header").css("background-color", "#4e73df");
@@ -88,7 +113,6 @@ $(document).ready(function () {
                 dataType: "json",
                 data: { idEmpresa: idEmpresa },
                 success: function () {
-                    listarEmpresas();
                 }
             });
         }
@@ -97,14 +121,14 @@ $(document).ready(function () {
 
     //para editar y guardar cuentas
     $('#form-Partidas').submit(e => {
-        var periodo="001";
-        var empresa="1";
+        var periodo = "001";
+        var empresa = "1";
         const postData = {
             numero: $('#txt_numeroPartida').val(),
             concepto: $('#txt_concepto').val(),
             fecha: $('#txt_fecha').val(),
-            periodo:periodo,
-            empresa:empresa
+            periodo: periodo,
+            empresa: empresa
         };
         var url = '';
         if (editar) {
@@ -114,16 +138,17 @@ $(document).ready(function () {
         }
 
         $.post(url, postData, function (response) {
-            console.log(response);
-            $('#form-Partidas').trigger('reset');
-            listarEmpresas();
+
+
+
 
         });
         e.preventDefault();
 
         $("#modalCRUD").modal("hide");
         editar = false;
-        idEmpre='';
+        idEmpre = '';
+        
 
     });
 
@@ -157,7 +182,27 @@ $(document).ready(function () {
         });
     }
 
+    function traerActual() {
+
+        $.ajax({
+            url: "./controlador/crudPeriodos/buscarPeriodo.php",
+            type: "POST",
+            dataType: "json",
+            data: {
+                idEmpresa: "1",
+                idPeriodo: "001"
+            },
+            success: function (respuesta) {
 
 
+                $("#txt_numeroPartida").val(respuesta);
+
+            }
+        });
+
+    }
+
+
+   
 
 });

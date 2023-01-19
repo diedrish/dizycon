@@ -2,7 +2,7 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Catalogo de Cuentas</h1>
+    <h1>Catalogo de Cuentas </h1>
     
 
 <div class="container">

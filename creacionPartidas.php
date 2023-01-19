@@ -54,30 +54,59 @@
                 </div>
                 <form id="form-Partidas">
                     <div class="modal-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txt_numeroPartida"  class="col-form-label">Numero Partida</label>
+                                <input type="text" class="form-control" id="txt_numeroPartida"  readonly require_once>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txt_fecha" class="col-form-label">Fecha</label>
 
-                        <div class="form-group">
-                            <label for="txt_numeroPartida" class="col-form-label">Numero Partida</label>
-                            <input type="text" class="form-control" id="txt_numeroPartida" autocomplete="off">
+                                <input type="date" id="txt_fecha" class="form-control" name="trip-start" value="" min="2023-01-01"
+                                    max="2023-12-31" require_once>
+                            </div>
 
                         </div>
                         <div class="form-group">
-
                             <label for="txt_concepto" class="col-form-label">Concepto Partida </label>
-                            <input type="text" class="form-control" id="txt_concepto" autocomplete="off">
+                            <input type="text" class="form-control" id="txt_concepto" autocomplete="off" require_once>
 
                         </div>
-                        <div class="form-group">
-                            <label for="txt_fecha" class="col-form-label">Fecha</label>
-
-                            <input type="date" id="txt_fecha" name="trip-start" value="" min="2023-01-01"
-                                max="2023-12-31">
-                        </div>
-
+                      
 
                     </div>
 
 
+
                     <div class="col-lg-12">
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="txt_codigo">Cuenta </label>
+                                <input type="text" autocomplete="off" class="form-control" id="txt_codigo" placeholder="Codigo Cuenta">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txt_conceptoPartida">Concepto Movimiento</label>
+                                <input type="text" autocomplete="off" class="form-control" id="txt_conceptoPartida" placeholder="Concepto Movimiento">
+                            </div>
+                            <div class="form-group col-md-5">
+                            <label for="txt_debe">Debe </label>
+                                <input type="text" autocomplete="off" class="form-control" id="txt_debe" placeholder="Debe">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="txt_haber">Haber</label>
+                                <input type="text" autocomplete="off" class="form-control" id="txt_haber" placeholder="Haber">
+                            </div>
+                            <div class="form-group col-md-2">
+                            <label for="">Opcion</label>
+                            <button id="btnAgregarPartida" type="button" class="btn btn-success" data-toggle="modal">Add</button>
+                            </div>
+                        </div>
+
+
+
+
+
                         <div class="table-responsive">
                             <table id="tabla" class="table table-striped table-bordered table-condensed"
                                 style="width:100%">
@@ -89,12 +118,8 @@
                                         <th>HABER</th>
                                     </tr>
                                 </thead>
-                                <tbody >
-                                   <td><input type="text" class="form-control" id="txt_cuenta" autocomplete="off"></td>
-                                   <td>concepto</td>
-                                   <td>12</td>
-                                   <td>12</td>
-
+                                <tbody id="detallePartida">
+                                    
                                 </tbody>
                             </table>
                         </div>

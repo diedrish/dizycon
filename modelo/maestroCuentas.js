@@ -56,7 +56,7 @@ $(document).ready(function () {
 
         $("#txt_codigo").val(codigo);
 
-        $("#txt_idEmpresa").value = idEmpresa;;
+        $("#txt_idEmpresa").value = idEmpresa;
         $("#txt_tipo").value = tipoCuenta;
         $("#txt_nombre").val(nombreCuenta);
         $("#txt_centroCosto").value = centroCosto;
