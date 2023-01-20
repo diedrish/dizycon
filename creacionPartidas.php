@@ -56,14 +56,14 @@
                     <div class="modal-body">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="txt_numeroPartida"  class="col-form-label">Numero Partida</label>
-                                <input type="text" class="form-control" id="txt_numeroPartida"  readonly require_once>
+                                <label for="txt_numeroPartida" class="col-form-label">Numero Partida</label>
+                                <input type="text" class="form-control" id="txt_numeroPartida" readonly require_once>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="txt_fecha" class="col-form-label">Fecha</label>
 
-                                <input type="date" id="txt_fecha" class="form-control" name="trip-start" value="" min="2023-01-01"
-                                    max="2023-12-31" require_once>
+                                <input type="date" id="txt_fecha" class="form-control" name="trip-start" value=""
+                                    min="2023-01-01" max="2023-12-31" require_once>
                             </div>
 
                         </div>
@@ -72,40 +72,39 @@
                             <input type="text" class="form-control" id="txt_concepto" autocomplete="off" require_once>
 
                         </div>
-                      
+
 
                     </div>
-
-
 
                     <div class="col-lg-12">
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="txt_codigo">Cuenta </label>
-                                <input type="text" autocomplete="off" class="form-control" id="txt_codigo" placeholder="Codigo Cuenta">
+                                <input type="text" autocomplete="off" class="form-control" id="txt_codigo"
+                                    placeholder="Codigo Cuenta">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="txt_conceptoPartida">Concepto Movimiento</label>
-                                <input type="text" autocomplete="off" class="form-control" id="txt_conceptoPartida" placeholder="Concepto Movimiento">
+                                <input type="text" autocomplete="off" class="form-control" id="txt_conceptoPartida"
+                                    placeholder="Concepto Movimiento">
                             </div>
                             <div class="form-group col-md-5">
-                            <label for="txt_debe">Debe </label>
-                                <input type="text" autocomplete="off" class="form-control" id="txt_debe" placeholder="Debe">
+                                <label for="txt_debe">Debe </label>
+                                <input type="text" autocomplete="off" class="form-control" id="txt_debe"
+                                    placeholder="Debe">
                             </div>
                             <div class="form-group col-md-5">
                                 <label for="txt_haber">Haber</label>
-                                <input type="text" autocomplete="off" class="form-control" id="txt_haber" placeholder="Haber">
+                                <input type="text" autocomplete="off" class="form-control" id="txt_haber"
+                                    placeholder="Haber">
                             </div>
                             <div class="form-group col-md-2">
-                            <label for="">Opcion</label>
-                            <button id="btnAgregarPartida" type="button" class="btn btn-success" data-toggle="modal">Add</button>
+                                <label for="">Opcion</label>
+                                <button id="btnAgregarPartida" type="button" class="btn btn-success"
+                                    data-toggle="modal">Add</button>
                             </div>
                         </div>
-
-
-
-
 
                         <div class="table-responsive">
                             <table id="tabla" class="table table-striped table-bordered table-condensed"
@@ -119,7 +118,7 @@
                                     </tr>
                                 </thead>
                                 <tbody id="detallePartida">
-                                    
+
                                 </tbody>
                             </table>
                         </div>
@@ -130,7 +129,7 @@
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
-
+                    </div>
                 </form>
             </div>
         </div>

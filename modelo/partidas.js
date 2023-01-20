@@ -136,6 +136,7 @@ $(document).ready(function () {
         } else {
             url = './controlador/crudPartidas/crearPartida.php';
         }
+        
 
         $.post(url, postData, function (response) {
 
@@ -201,6 +202,10 @@ $(document).ready(function () {
         });
 
     }
+
+
+
+    
 
 
    
